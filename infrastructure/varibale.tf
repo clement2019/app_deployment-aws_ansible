@@ -1,15 +1,12 @@
-variable "access_key" {}
-variable "secret_key" {}
-
 variable "region" {
     type = "string"
     description = "aws region where the VM will be provisioned"
-    default = "us-east-2"
+    default = "eu-west-2"
 }
 
 variable "ami" {
     type = "string"
-    description = "aws ami used to provision the VM"
+    description = "aws ami used to provision the server"
     default = "ami-0233c2d874b811deb"
 }
 

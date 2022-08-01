@@ -33,11 +33,11 @@ resource "random_string" "random" {
 }
 
 resource "aws_key_pair" "app_ssh" {
-  key_name   = "application-ssh-${random_string.random.result}"
+  key_name   = "php_app-ssh-${random_string.random.result}"
   public_key = var.instance_ssh_public_key
   tags = {
-    Name      = "application-ssh"
-    createdBy = "listentolearn"
+    Name      = "php_app-ssh"
+    createdBy = "ayeni clement"
   }
 }
 
@@ -51,8 +51,8 @@ resource "aws_instance" "app_vm" {
   associate_public_ip_address = false
 
   tags = {
-    Name      = "application-vm"
-    createdBy = "listentolearn"
+    Name      = "PHP_app_server"
+    createdBy = "ayeni_clement"
   }
 }
 
@@ -62,8 +62,8 @@ resource "aws_eip" "elastic_ip" {
 }
 
 resource "aws_security_group" "vm_sg" {
-  name        = "vm-security-group"
-  description = "Allow incoming connections."
+  name        = "appserver-security-group"
+  description = "This alows incoming connections."
 
   vpc_id = module.vpc.vpc_id
 
