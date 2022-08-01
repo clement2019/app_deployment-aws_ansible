@@ -45,8 +45,11 @@ The project is built using,
 ### Pre-requisite
 •	Login to your free AWs account
 •	Create an IAM user and generate Access_key and secret_key
+
 •	Setup the aws cli  with Required credentialsat the default region.
+
 •	Install terraform v1.0.0 using this link (https://www.terraform.io/downloads.html)
+
 •	Install Ansible using this link (https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 ### Installation
 
@@ -55,8 +58,8 @@ The project is built using,
   $ git clone https://github.com/clement2019/app_deployment-aws_ansible
    ```
 2. Install Terraform tool
-3. Install Ansible tool
 
+3. Install Ansible tool
 
 
 <!-- USAGE EXAMPLES -->
