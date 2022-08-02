@@ -48,9 +48,24 @@ The project is built using,
 
 •	Setup the aws cli  with Required credentialsat the default region.
 
-•	Install terraform v1.0.0 using this link (https://www.terraform.io/downloads.html)
+•	First download and install the terraform using this link
+
+As a first step, install terraform (see: https://www.terraform.io/downloads)) and select your machine version if its windows 
+
+and if its mac you can select accordingly and install the requirements:
+
+•	Then download and install AWs CLI Installation requirements We support the AWS CLI on Microsoft-supported versions of 64-bit Windows.
+
+Admin rights to install software
+
+•	Install or update the AWS CLI To update your current installation of AWS CLI on Windows, download a new installer each time
+you update to overwrite previous versions. AWS CLI is updated regularly. To see when the latest version was released, see the AWS CLI changelog on GitHub.
+Download and run the AWS CLI MSI installer for Windows (64-bit):
+
+https://awscli.amazonaws.com/AWSCLIV2.msi
 
 •	Install Ansible using this link (https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+
 ### Installation
 
 1. First Clone the project repo now
@@ -84,7 +99,7 @@ as the output.
 
 ### Part 3: This part is equally critical because i build an PHP application for it to wok it requires a dependency called Apache webserver and that has to be installed as requitred software on the Aws Ec2 instance just provsioned while the application database will be MySql all these will be done using Ansible.
 
-1. Inside inventory hosts file in the ansible directory /etc/ansible/hosts , now Open the inventory.yml file under ansible directory and replace 0.0.0.0 with the public IP copied from the Ec2 instance provisioned in part 1.
+1. Originally inside inventory hosts file in the ansible directory /etc/ansible/hosts  we can store all the ip addresses but for this project we wont go that route,thwr is actually an inventory.yml file i created inside the ansible directory and replace 0.0.0.0 with the public IP copied from the Ec2 instance provisioned in part 1.
 2. Replace the contents of the ./ansible/secrets/ssh.private with your private key. 
 This is the private key corresponding to the public key used in Part 1 while provisioning the infrastructure using terraform.
 3. Then run the ansible playbook using the below command
